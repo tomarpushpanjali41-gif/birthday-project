@@ -1,0 +1,177 @@
+body {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+h2{
+    position: relative;
+    z-index: 2;
+}
+
+h3{
+    position: relative;
+    z-index: 2;
+}
+
+h4{
+font-size:24px;
+color:white;
+margin-top:10px;
+letter-spacing:2px;
+position:relative;
+z-index:2;
+}
+
+.container {
+    margin-top: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.photo{
+    width:250px;
+    border-radius:15px;
+    opacity:0;
+    transform:scale(0);
+    transition:1s;
+}
+
+.show-photo{
+    opacity:1;
+    transform:scale(1);
+}
+
+button {
+    position: relative;
+    z-index: 2;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: white;
+    color: hotpink;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
+    z-index:5;
+    transition:1s;
+}
+
+.light-on{
+    opacity:0;
+    pointer-events:none;
+}
+
+#lightBtn{
+    padding:10px 20px;
+    font-size:18px;
+    background:#ff4081;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    position:relative;
+    z-index:10;
+}
+
+#message {
+    margin-top: 20px;
+}
+
+body::before {
+    content: "🎈 🎈 🎈 🎈 🎈 🎈 🎈";
+    position: fixed;
+    bottom: -50px;
+    width: 100%;
+    font-size: 30px;
+    animation: balloons 8s linear infinite;
+}
+
+@keyframes balloons {
+    0% { bottom: -50px; }
+    100% { bottom: 100%; }
+}
+
+body::after {
+    content: "💖 💕 💗 💞 💘";
+    position: fixed;
+    left: 0;
+    width: 100%;
+    font-size: 24px;
+    animation: hearts 6s linear infinite;
+}
+
+@keyframes hearts {
+    0% { top: 100%; }
+    100% { top: -50px; }
+}
+
+.balloon {
+    position: fixed;
+    font-size: 30px;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    0% { top: 100%; }
+    100% { top: -50px; }
+}
+
+#fireworks{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#cake{
+    font-size:80px;
+    margin-top:20px;
+    animation: cakeJump 1s infinite alternate;
+}
+
+@keyframes cakeJump{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-20px);
+    }
+}
+
+#typing{
+    font-size:40px;
+    color:#ff4081;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+#popup{
+position:fixed;
+top:10%;
+left:50%;
+transform:translate(-50%,-50%);
+background:white;
+color:black;
+padding:20px;
+border-radius:10px;
+font-size:20px;
+display:none;
+z-index:10;
+}
