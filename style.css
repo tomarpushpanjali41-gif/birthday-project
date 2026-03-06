@@ -164,7 +164,7 @@ body::after {
 
 #popup{
 position:fixed;
-bottom: 80px;
+top:5%;
 left:50%;
 transform:translate(-50%,-50%);
 background:white;
@@ -176,3 +176,4 @@ display:none;
 z-index:10;
 
 }
+
